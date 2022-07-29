@@ -1,0 +1,38 @@
+[
+  {
+    "first": {
+      "name": "Cat",
+      "votes": 0,
+      "link": "./assets/cat.jpg"
+    },
+    "second": {
+      "name": "Dog",
+      "votes": 0,
+      "link": "./assets/dog.jpg"
+    }
+  },
+  {
+    "first": {
+      "name": "Burger",
+      "votes": 0,
+      "link": "./assets/burger.jpg"
+    },
+    "second": {
+      "name": "Pizza",
+      "votes": 0,
+      "link": "./assets/pizza.jpg"
+    }
+  },
+  {
+    "first": {
+      "name": "Car",
+      "votes": 0,
+      "link": "./assets/car.jpg"
+    },
+    "second": {
+      "name": "Bike",
+      "votes": 0,
+      "link": "./assets/motorcycle.jpg"
+    }
+  }
+]
