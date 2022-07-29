@@ -1,0 +1,8 @@
+#startcontainer {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
