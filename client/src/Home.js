@@ -5,7 +5,7 @@ import './Home.css';
 function Home() {
   return (
     <div id="startcontainer">
-      <Button id="startbutton" variant="light" size="lg" href="/q1">
+      <Button id="startbutton" variant="light" size="lg" href="/questions/1">
         Start
       </Button>
     </div>

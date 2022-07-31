@@ -9,9 +9,9 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='q1' element={<Game number={1} />} />
-        <Route path='q2' element={<Game number={2} />} />
-        <Route path='q3' element={<Game number={3} />} />
+        <Route path='questions/1' element={<Game number={1} />} />
+        <Route path='questions/2' element={<Game number={2} />} />
+        <Route path='questions/3' element={<Game number={3} />} />
       </Routes>
     </>
   );
