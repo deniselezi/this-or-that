@@ -1,16 +1,17 @@
 import React from "react";
-import axios from "axios";
+import Card from "react-bootstrap/Card";
 
 function ImageCard(props) {
-  axios.get("http://localhost:3001/questions/1").then(res => {
-    console.log(res.data);
-  }).catch(err => {
-    console.log(err);
-  })
   return (
-    <>
-      image
-    </>
+    <Card
+      className="bg-light text-dark"
+      id="image"
+      onClick={(e) => props.handleClick(e, props.first)}>
+      <Card.Img src={require("" + props.link)} alt={`${props.name} image`}/>
+      <Card.ImgOverlay>
+        <Card.Title>{props.name}</Card.Title>
+      </Card.ImgOverlay>
+    </Card>
   )
 }
 
