@@ -1,7 +1,9 @@
-#startcontainer {
+.vertical-center {
+  min-height: 90%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 90vh; /* These two lines are counted as one :-)       */
+  color: white;
   display: flex;
-  margin: auto;
-  justify-content: center;
   align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-

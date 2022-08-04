@@ -4,11 +4,11 @@ import './Home.css';
 
 function Home() {
   return (
-    <div id="startcontainer">
-      <Button id="startbutton" variant="light" size="lg" href="/questions/1">
+    <Container className="vertical-center">
+      <Button variant="light" size="lg" href="/questions/1">
         Start
       </Button>
-    </div>
+    </Container>
   );
 }
 

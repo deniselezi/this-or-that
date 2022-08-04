@@ -136,26 +136,26 @@ class Game extends Component {
 
     return (
       <Container fluid>
-        <Row id="questionRow">
+        <Row className="mt-2" id="questionRow">
           Question {number}
         </Row>
-        <Row id="imagesRow">
-          <Col className="justify-content-center" xs={8} sm={8} lg={4}>
+        <Row className="m-3" id="imagesRow">
+          <Col className="m-1" xs={8} sm={8} lg={4}>
             {firstCard}
           </Col>
-          <Col className="justify-content-center" xs={8} sm={8} lg={4}>
+          <Col className="m-1" xs={8} sm={8} lg={4}>
             {secondCard}
           </Col>
         </Row>
-        <Row>
-          <Col className="justify-content-center" xs={12} sm={12} lg={9}>
+        <Row className="m-3">
+          <Col className="m-1 text-center" xs={12} sm={12} lg={9}>
             <ProgressBarWrapper
               number={number}
               questionsNumber={questionsNumber}
               animated={animated}
             />
           </Col>
-          <Col className="justify-content-center">
+          <Col className="m-1 text-center">
             <Button 
               id="nextbutton" 
               variant="light" 

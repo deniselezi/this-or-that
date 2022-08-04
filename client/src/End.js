@@ -1,23 +1,15 @@
 import React from "react";
-import { Button, Container, Row } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
+import "./Home.css";
 
 function End(props) {
   return (
-    <Container>
-      <Row>
-        <h1>Thanks for playing!</h1>
-      </Row>
-      <Row>
-        <Button 
-          id="nextbutton" 
-          variant="light" 
-          size="lg" 
-          href="/">
-          Back to Home
-        </Button>
+    <Container className="vertical-center">
+      <Row className="text-center ">
+        <h1>Thanks for playing &#128513;</h1>
       </Row>
     </Container>
   )
 }
-
+// 128513	1F601
 export default End;
