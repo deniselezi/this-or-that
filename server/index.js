@@ -17,7 +17,7 @@ app.get('/questions/:id', function(req, res) {
   const id = req.params.id;
   fs.readFile(dataFile, 'utf-8').then(data => {
     arr = JSON.parse(data);
-    if (id > arr.length) {  //i.e. all images have been displayed
+    if (id > arr.length) {  // i.e. all images have been displayed
       const err =  "No more questions left.";
       res.send([err, arr.length]);
       throw err;
@@ -37,15 +37,14 @@ app.post('/post/:id', function(req, res) {
       obj[id] = req.body;
       return obj;
     })
-    // UNCOMMENT THIS .THEN TO ACTUALLY UPDATE THE JSON
-    // .then(obj => {
-    //   fs.writeFile(dataFile, JSON.stringify(obj), err => {
-    //     if (err) {
-    //       console.error(err);
-    //       res.send("Error updating JSON.");
-    //     }
-    //   })
-    // })
+    .then(obj => {
+      fs.writeFile(dataFile, JSON.stringify(obj), err => {
+        if (err) {
+          console.error(err);
+          res.send("Error updating JSON.");
+        }
+      })
+    })
     .catch(err => {
       console.error(err);
       res.send(err);
