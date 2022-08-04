@@ -29,7 +29,7 @@ class Header extends Component {
     return (
       <Navbar bg="light" expand="lg">
         <Nav className="me-auto">
-          <Nav.Link id="title" href='/'>This or That</Nav.Link>
+          <Nav.Link id="title" href='/'>this-or-that</Nav.Link>
         </Nav>
         <Navbar.Brand 
           onMouseOver={ this.handleOver } 
