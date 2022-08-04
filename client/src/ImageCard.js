@@ -5,12 +5,14 @@ function ImageCard(props) {
   return (
     <Card
       className="bg-light text-dark"
-      id="image"
-      onClick={(e) => props.handleClick(e, props.first)}>
-      <Card.Img src={require("" + props.link)} alt={`${props.name} image`}/>
-      <Card.ImgOverlay>
-        <Card.Title>{props.name}</Card.Title>
-      </Card.ImgOverlay>
+      id={props.clicked ? "imageClicked" : "image"}
+      onClick={(e) => props.handleClick(e, props.first)}
+      onAnimationEnd={props.onAnimationEnd}>
+
+      <Card.Img src={require("" + props.link)} variant="top" />
+      <Card.Body>
+        <Card.Text>{props.name}</Card.Text>
+      </Card.Body>
     </Card>
   )
 }
