@@ -17,7 +17,12 @@ app.get('/questions/:id', function(req, res) {
   const id = req.params.id;
   fs.readFile(dataFile, 'utf-8').then(data => {
     arr = JSON.parse(data);
-    res.send(arr[id - 1]);
+    if (id > arr.length) {  //i.e. all images have been displayed
+      const err =  "No more questions left.";
+      res.send([err, arr.length]);
+      throw err;
+    }
+    res.send([arr[id - 1], arr.length]);
   }).catch(err => {
     console.log(err);
   })

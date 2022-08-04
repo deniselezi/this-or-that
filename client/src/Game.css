@@ -15,3 +15,20 @@
 #image:hover {
   cursor: pointer;
 }
+
+@keyframes spinning {
+  to {
+    transform: scale(0) rotate(1080deg);
+  }
+}
+
+#imageClicked {
+  animation-name: spinning;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#imageClicked:hover {
+  cursor: not-allowed;
+}

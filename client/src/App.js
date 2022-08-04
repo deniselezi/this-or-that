@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './Header.js';
 import Home from './Home';
-import Game from './Game';
+import GameHOC from './GameHOC';
+import End from './End';
 
 function App() {
   return (
@@ -9,9 +10,8 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='questions/1' element={<Game number={1} />} />
-        <Route path='questions/2' element={<Game number={2} />} />
-        <Route path='questions/3' element={<Game number={3} />} />
+        <Route path='questions/:id' element={<GameHOC />} />
+        <Route path='end' element={<End />} />
       </Routes>
     </>
   );
